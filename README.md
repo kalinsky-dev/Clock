@@ -25,7 +25,7 @@ That's it! You can now see the exact time on your local machine. Enjoy!
 
 <h2 align="center">Screenshot</h2>
 
-![app](./screenshots/My Clock.png)
+![app](./screenshots/My%20Clock.png)
 
 ## Contributing
 
