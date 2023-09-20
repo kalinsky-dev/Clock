@@ -10,9 +10,11 @@ function setDate() {
   // Check if the seconds are 0 and switch off the transition
   // to prevent returning the Seconds Hand to the 0 and rotation backwards!
   if (seconds == 0) {
-    secondHand.classList.add('hand', 'second-hand', 'second-hand-when-0');
-  } else {
-    secondHand.classList.remove('second-hand-when-0');
+    if (secondHand.classList.contains('second-hand-when-0')) {
+      secondHand.classList.remove('second-hand-when-0');
+    } else {
+      secondHand.classList.add('second-hand-when-0');
+    }
   }
 
   const secondsDegrees = (seconds / 60) * 360 + 90;
