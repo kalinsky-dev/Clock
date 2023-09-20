@@ -6,6 +6,15 @@ function setDate() {
   const now = new Date();
 
   const seconds = now.getSeconds();
+
+  // Check if the seconds are 0 and switch off the transition
+  // to prevent returning the Seconds Hand to the 0 and rotation backwards!
+  if (seconds == 0) {
+    secondHand.classList.add('hand', 'second-hand', 'second-hand-when-0');
+  } else {
+    secondHand.classList.remove('second-hand-when-0');
+  }
+
   const secondsDegrees = (seconds / 60) * 360 + 90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
